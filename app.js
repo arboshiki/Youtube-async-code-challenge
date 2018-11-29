@@ -17,8 +17,16 @@
     $('.loader-wrapper').removeClass('shown');
   }
 
-  $('#searchForm').submit(async (ev) => {
-    ev.preventDefault();
-    let $input = $('#searchInput');
-  });
+  (function listenOnFormSubmit() {
+    $('#searchForm').submit(async (ev) => {
+      ev.preventDefault();
+      let $input = $('#searchInput');
+
+      main($input.val());
+    });
+  })();
+
+  function main() {
+    //Write our code here
+  }
 })();
