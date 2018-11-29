@@ -18,7 +18,7 @@
   }
 
   (function listenOnFormSubmit() {
-    $('#searchForm').submit(async (ev) => {
+    $('#searchForm').submit((ev) => {
       ev.preventDefault();
       let $input = $('#searchInput');
 
